@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Daily Deals Alerts
+        </title>
+        
+        <link href="static/stylesheets/style.css" rel="stylesheet"></link>
+        <script src="static/jquery.js"></script>
+        <script src="static/script.js"></script>
+        <script type="text/javascript">
+            console.log($("#results"))
+        </script>
+        
+    </head>
+    <body>
+        <div id="headline"> What do you want?</div>
+        <div class="login-area">
+    {% if user %}
+      <a href="/profile">{{user.name}}</a>(<a class="login-link" href="/logout">logout</a>)
+    <!--<a href="/profile/{{user.name}}">{{user.name}}</a>-->
+    {% else %}
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/signup">signup</a>
+    {% endif %}
+  </div>
+        <form id="inputs" method="post">
+            <input id="product" type="text" name="product" value="product?"></input>
+            {% if user.email %}
+            <input type="text" name="email" id="email" value="{{user.email}}"></input>
+            {%else%}
+            <input type="text" name="email" id="email" value="email?"></input>
+                
+        {%endif%}
+        
+            <button type="submit" value="submit!">Submit</button>
+        </form>
+        
+    </body>
+</html>

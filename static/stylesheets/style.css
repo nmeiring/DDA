@@ -1,0 +1,63 @@
+input {
+    width: 35%;
+    text-align: center;
+    float: left;
+}
+
+#register {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    margin-right: 10px;
+}
+
+#login {
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    margin-right: 10px;
+}
+
+#headline {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 5%;
+    
+}
+
+#inputs {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+#email {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.login-area {
+    font-size: 20px;
+    color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#product {
+    margin-left: 10%;
+}
+
+button {
+    width: 200px;
+    height: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#results {
+    height: 60%;
+    width: 80%;
+    margin: 10px 10% 0 10%;
+    border: solid 1px #000;
+}

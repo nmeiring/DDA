@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Profile</title>
+    <link href="static/stylesheets/profile.css" rel="stylesheet"></link>
+</head>
+<body>
+<div id="home"> <a href="/">Home</a></div>
+<div class="login-area">
+    {% if user %}
+      <a href="/profile">{{user.name}}</a>(<a class="login-link" href="/logout">logout</a>)
+    {% endif%}
+</div>
+
+
+    {% if product and email%}
+    <div>You have successfully requested {{product}}</div> <br>
+<div>You will be notified at {{email}}</div>
+    {% else%}
+        
+        
+        {% endif%}
+
+
+    <table id="results">
+    <th colspan="3">Product History</th>
+    {% for p in product_list %}
+    
+    <tr>
+        <td>{{p.product}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.created}}</td>
+        <td><a href="/profile">Matches</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+    <div>{{om_points}}</div>
+</body>
+</html>
